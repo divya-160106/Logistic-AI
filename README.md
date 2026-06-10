@@ -35,48 +35,87 @@
 | Styling    | Pure CSS with CSS variables, dark theme         |
 | Deployment | Vercel (frontend) + Render (backend)            |
 
----
-
 ## 📁 Project Structure
+
+```text
 logisticai/
+│
 ├── backend/
 │   ├── api/
-│   │   ├── locations.py          # CRUD endpoints for map waypoints
-│   │   ├── routes_endpoint.py    # Route optimization endpoint
-│   │   ├── factors.py            # External conditions API
-│   │   ├── user.py               # User availability API
-│   │   └── routes.py             # Registers all routers
+│   │   ├── locations.py
+│   │   ├── routes_endpoint.py
+│   │   ├── factors.py
+│   │   ├── user.py
+│   │   └── routes.py
+│   │
 │   ├── core/
-│   │   └── websocket_manager.py  # Manages WebSocket connections
+│   │   └── websocket_manager.py
+│   │
 │   ├── db/
-│   │   └── database.py           # MongoDB + in-memory fallback
+│   │   └── database.py
+│   │
 │   ├── ml/
-│   │   ├── optimizer.py          # RL route optimizer — core AI engine
-│   │   ├── train.py              # Offline RL training script
-│   │   └── weights.json          # Pre-trained model weights
-│   ├── main.py                   # FastAPI app entry point
+│   │   ├── optimizer.py
+│   │   ├── train.py
+│   │   └── weights.json
+│   │
+│   ├── main.py
 │   └── requirements.txt
+│
 ├── frontend/
 │   ├── src/
 │   │   ├── components/
-│   │   │   ├── Map/              # Leaflet map, legend, controls
-│   │   │   ├── Panels/           # Locations, availability, factors, route panels
-│   │   │   ├── Sidebar/          # Nav, stats bar, top bar
-│   │   │   └── Dashboard/        # Live feed, notifications
-│   │   ├── store/
-│   │   │   └── useStore.js       # Global state — Zustand
+│   │   │   ├── Dashboard/
+│   │   │   ├── Map/
+│   │   │   ├── Panels/
+│   │   │   └── Sidebar/
+│   │   │
 │   │   ├── hooks/
-│   │   │   ├── useWebSocket.js            # WebSocket connection hook
-│   │   │   └── useSessionPersistence.js   # localStorage persistence
+│   │   │   ├── useSessionPersistence.js
+│   │   │   └── useWebSocket.js
+│   │   │
+│   │   ├── store/
+│   │   │   └── useStore.js
+│   │   │
 │   │   └── utils/
-│   │       ├── api.js            # Axios instance
-│   │       └── demoData.js       # Demo scenario seed data
+│   │       ├── api.js
+│   │       └── demoData.js
+│   │
 │   └── package.json
-├── start.sh                      # Mac/Linux one-command start
-├── start.bat                     # Windows one-command start
+│
+├── start.sh
+├── start.bat
 └── README.md
+```
 
----
+### Backend
+
+| File | Purpose |
+|--------|---------|
+| `api/locations.py` | CRUD endpoints for map waypoints |
+| `api/routes_endpoint.py` | Route optimization endpoint |
+| `api/factors.py` | External conditions API |
+| `api/user.py` | User availability API |
+| `core/websocket_manager.py` | WebSocket connection manager |
+| `db/database.py` | MongoDB + in-memory fallback |
+| `ml/optimizer.py` | Reinforcement-learning route optimizer |
+| `ml/train.py` | Offline model training |
+| `ml/weights.json` | Pre-trained model weights |
+| `main.py` | FastAPI application entry point |
+
+### Frontend
+
+| Folder/File | Purpose |
+|-------------|---------|
+| `components/Map` | Leaflet map, controls, legend |
+| `components/Panels` | Locations, factors, routes, availability |
+| `components/Sidebar` | Navigation, stats, top bar |
+| `components/Dashboard` | Live feed and notifications |
+| `hooks/useWebSocket.js` | WebSocket connection hook |
+| `hooks/useSessionPersistence.js` | Local storage persistence |
+| `store/useStore.js` | Zustand global state |
+| `utils/api.js` | Axios API client |
+| `utils/demoData.js` | Demo scenario seed data |
 
 ## 🚀 Running Locally
 
