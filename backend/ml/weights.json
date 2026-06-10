@@ -1,0 +1,14 @@
+{
+  "distance_penalty": 0.01,
+  "criticality_high_bonus": 11.890036982008723,
+  "criticality_medium_bonus": 9.15903517502184,
+  "criticality_low_bonus": 5.357132421934074,
+  "time_window_violation_penalty": 11.494363139487868,
+  "factor_rain": 0.16605324459608992,
+  "factor_snow": 0.13265583765589137,
+  "factor_traffic": 0.10240043508382837,
+  "factor_construction": 0.4791792808760321,
+  "factor_fog": 0.06407887968518651,
+  "factor_wind": 0.13567815025388033,
+  "factor_road_closure": 1.4165408619747708
+}
