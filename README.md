@@ -226,11 +226,8 @@ python ml/train.py
 
 ## 📄 Copyright
 
-Copyright (c) 2025 Divya. All rights reserved.
-
-This project and its source code may not be copied, modified, distributed,
-or used in any form without explicit written permission from the author.
+Copyright (c) 2026 Divyasree M. All rights reserved.
 
 ---
 
-<p align="center">Built by Divya</p>
+<p align="center">Built with ❤️ and a little pain</p>
