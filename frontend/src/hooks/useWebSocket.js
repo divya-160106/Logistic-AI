@@ -9,7 +9,8 @@ export function useWebSocket() {
 
   useEffect(() => {
     const connect = () => {
-      const ws = new WebSocket(`ws://localhost:8000/ws/${sessionId}`)
+      const wsBase = import.meta.env.VITE_WS_URL || 'ws://localhost:8000'
+      const ws = new WebSocket(`${wsBase}/ws/${sessionId}`)
       wsRef.current = ws
 
       ws.onopen = () => {
