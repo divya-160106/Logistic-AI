@@ -9,6 +9,12 @@
 
 ---
 
+## 📸 Preview
+
+<img width="1918" height="911" alt="image" src="https://github.com/user-attachments/assets/06e4ada5-3542-4d2b-8778-cf353c6ad271" />
+
+---
+
 ## ✨ Features
 
 - 🗺️  Interactive map — click anywhere to drop waypoints
